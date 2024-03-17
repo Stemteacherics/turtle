@@ -1,12 +1,518 @@
 <!DOCTYPE html>
-<html>
-<head>
-<title>turtle</title>
-</head>
-<body>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Learn the basic template for creating HTML pages.  The basic tags which all HTML documents should be crafted from.">
+    <meta name="keywords" content="html, tags, body, doctype, web page, internet, head, title">
+    <meta name="author" content="Ryan Chadwick">
 
-<h1>This is jk from bts</h1>
-<p>This is lisa from black pink.</p>
+    <title>Basic Template - HTML Tutorial</title>
 
-</body>
-</html>
+    <!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap theme -->
+    <link href="../css/bootstrap-theme.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
+    
+    <link rel="icon" type="image/png" href="/favicons/favicon_html.png">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+<meta http-equiv="origin-trial" content="As0hBNJ8h++fNYlkq8cTye2qDLyom8NddByiVytXGGD0YVE+2CEuTCpqXMDxdhOMILKoaiaYifwEvCRlJ/9GcQ8AAAB8eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3MTk1MzI3OTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="AgRYsXo24ypxC89CJanC+JgEmraCCBebKl8ZmG7Tj5oJNx0cmH0NtNRZs3NB5ubhpbX/bIt7l2zJOSyO64NGmwMAAACCeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3MTk1MzI3OTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="A/ERL66fN363FkXxgDc6F1+ucRUkAhjEca9W3la6xaLnD2Y1lABsqmdaJmPNaUKPKVBRpyMKEhXYl7rSvrQw+AkAAACNeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiRmxlZGdlQmlkZGluZ0FuZEF1Y3Rpb25TZXJ2ZXIiLCJleHBpcnkiOjE3MTkzNTk5OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A6OdGH3fVf4eKRDbXb4thXA4InNqDJDRhZ8U533U/roYjp4Yau0T3YSuc63vmAs/8ga1cD0E3A7LEq6AXk1uXgsAAACTeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiRmxlZGdlQmlkZGluZ0FuZEF1Y3Rpb25TZXJ2ZXIiLCJleHBpcnkiOjE3MTkzNTk5OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="As0hBNJ8h++fNYlkq8cTye2qDLyom8NddByiVytXGGD0YVE+2CEuTCpqXMDxdhOMILKoaiaYifwEvCRlJ/9GcQ8AAAB8eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3MTk1MzI3OTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="AgRYsXo24ypxC89CJanC+JgEmraCCBebKl8ZmG7Tj5oJNx0cmH0NtNRZs3NB5ubhpbX/bIt7l2zJOSyO64NGmwMAAACCeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3MTk1MzI3OTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="A/ERL66fN363FkXxgDc6F1+ucRUkAhjEca9W3la6xaLnD2Y1lABsqmdaJmPNaUKPKVBRpyMKEhXYl7rSvrQw+AkAAACNeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiRmxlZGdlQmlkZGluZ0FuZEF1Y3Rpb25TZXJ2ZXIiLCJleHBpcnkiOjE3MTkzNTk5OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A6OdGH3fVf4eKRDbXb4thXA4InNqDJDRhZ8U533U/roYjp4Yau0T3YSuc63vmAs/8ga1cD0E3A7LEq6AXk1uXgsAAACTeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiRmxlZGdlQmlkZGluZ0FuZEF1Y3Rpb25TZXJ2ZXIiLCJleHBpcnkiOjE3MTkzNTk5OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="As0hBNJ8h++fNYlkq8cTye2qDLyom8NddByiVytXGGD0YVE+2CEuTCpqXMDxdhOMILKoaiaYifwEvCRlJ/9GcQ8AAAB8eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3MTk1MzI3OTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="AgRYsXo24ypxC89CJanC+JgEmraCCBebKl8ZmG7Tj5oJNx0cmH0NtNRZs3NB5ubhpbX/bIt7l2zJOSyO64NGmwMAAACCeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3MTk1MzI3OTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="A/ERL66fN363FkXxgDc6F1+ucRUkAhjEca9W3la6xaLnD2Y1lABsqmdaJmPNaUKPKVBRpyMKEhXYl7rSvrQw+AkAAACNeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiRmxlZGdlQmlkZGluZ0FuZEF1Y3Rpb25TZXJ2ZXIiLCJleHBpcnkiOjE3MTkzNTk5OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A6OdGH3fVf4eKRDbXb4thXA4InNqDJDRhZ8U533U/roYjp4Yau0T3YSuc63vmAs/8ga1cD0E3A7LEq6AXk1uXgsAAACTeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiRmxlZGdlQmlkZGluZ0FuZEF1Y3Rpb25TZXJ2ZXIiLCJleHBpcnkiOjE3MTkzNTk5OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><script async="" src="https://fundingchoicesmessages.google.com/i/ca-pub-9971420945046594?ers=2"></script><script charset="utf-8" src="https://platform.twitter.com/js/button.856debeac157d9669cf51e73a08fbc93.js"></script><script async="" src="https://fundingchoicesmessages.google.com/f/AGSKWxXRNe05UWVe_59o3Tb9p08KiBXZ0Nfu9tZsqVGYmXCh3gBsrcbgfeTGzIWJrG2-RSksqzla3TaecmeJvInM67chdNDRt84i-RtXCRaqYaE2Wt40DKRndhDvZ_zJyKEuJyeS6KClfg==?fccs=W251bGwsbnVsbCxudWxsLG51bGwsbnVsbCxudWxsLFsxNzEwNjc0NDY0LDc2NjAwMDAwMF0sbnVsbCxudWxsLG51bGwsW251bGwsWzddXSwiaHR0cHM6Ly9yeWFuc3R1dG9yaWFscy5uZXQvaHRtbC10dXRvcmlhbC9odG1sLXRlbXBsYXRlLnBocCIsbnVsbCxbWzgsIklJVXREU1FSUWtNIl0sWzksImVuLVVTIl0sWzE4LCJbW1swXV1dIl0sWzE5LCIyIl1dXQ"></script><meta http-equiv="origin-trial" content="As0hBNJ8h++fNYlkq8cTye2qDLyom8NddByiVytXGGD0YVE+2CEuTCpqXMDxdhOMILKoaiaYifwEvCRlJ/9GcQ8AAAB8eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3MTk1MzI3OTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="AgRYsXo24ypxC89CJanC+JgEmraCCBebKl8ZmG7Tj5oJNx0cmH0NtNRZs3NB5ubhpbX/bIt7l2zJOSyO64NGmwMAAACCeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3MTk1MzI3OTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="A/ERL66fN363FkXxgDc6F1+ucRUkAhjEca9W3la6xaLnD2Y1lABsqmdaJmPNaUKPKVBRpyMKEhXYl7rSvrQw+AkAAACNeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiRmxlZGdlQmlkZGluZ0FuZEF1Y3Rpb25TZXJ2ZXIiLCJleHBpcnkiOjE3MTkzNTk5OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A6OdGH3fVf4eKRDbXb4thXA4InNqDJDRhZ8U533U/roYjp4Yau0T3YSuc63vmAs/8ga1cD0E3A7LEq6AXk1uXgsAAACTeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiRmxlZGdlQmlkZGluZ0FuZEF1Y3Rpb25TZXJ2ZXIiLCJleHBpcnkiOjE3MTkzNTk5OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><script async="" src="https://fundingchoicesmessages.google.com/f/AGSKWxUz8ZEX5vDr8NYPg7CnYXAga2AzuZZtmz1RYdkZWDRsuzV0oaZM_PN02rh3P-C8IvPKT5IE9PHrN4kkgOTctn4tmw04hOo3MMz6milYvMtDHRzeXbsPq8lsbp_2ZGJDJ2eLLKptIg==?fccs=W251bGwsbnVsbCxudWxsLG51bGwsbnVsbCxudWxsLFsxNzEwNjc0NDY1LDY1NzAwMDAwMF0sbnVsbCxudWxsLG51bGwsW251bGwsWzcsNl0sbnVsbCxudWxsLG51bGwsbnVsbCxudWxsLG51bGwsbnVsbCxudWxsLG51bGwsMV0sImh0dHBzOi8vcnlhbnN0dXRvcmlhbHMubmV0L2h0bWwtdHV0b3JpYWwvaHRtbC10ZW1wbGF0ZS5waHAiLG51bGwsW1s4LCJJSVV0RFNRUlFrTSJdLFs5LCJlbi1VUyJdLFsxOCwiW1tbMF1dXSJdLFsxOSwiMiJdXV0"></script><script async="" src="https://fundingchoicesmessages.google.com/f/AGSKWxXNwT02xBsiLaH3Mzqq1kUXt0rmk9MRO9iShr2Ib4hWKSkBk_4ZJYRJl9VkrZHNoA3dTH8eDHmRSXVqWxYyptVXnWGlUdwj6qZj2eNgT4Z9Lbi_A7dr0GKRKIVmiLnnOBKkzIcmVw==?fccs=W251bGwsbnVsbCxudWxsLG51bGwsbnVsbCxudWxsLFsxNzEwNjc0NDY1LDc2ODAwMDAwMF0sbnVsbCxudWxsLG51bGwsW251bGwsWzcsNiwxMF0sbnVsbCxudWxsLG51bGwsbnVsbCxudWxsLG51bGwsbnVsbCxudWxsLG51bGwsMV0sImh0dHBzOi8vcnlhbnN0dXRvcmlhbHMubmV0L2h0bWwtdHV0b3JpYWwvaHRtbC10ZW1wbGF0ZS5waHAiLG51bGwsW1s4LCJJSVV0RFNRUlFrTSJdLFs5LCJlbi1VUyJdLFsxOCwiW1tbMF1dXSJdLFsxOSwiMiJdXV0"></script><script async="" src="https://fundingchoicesmessages.google.com/f/AGSKWxVurmV3mUuYNETd2-bVkQ2Ps8ECXYqWRLE5asQm64-QzQhFhNzZp1kwRKzrQ4D-kOQhEKhIDzXts_kiAGgBnTywAtj0MQcFmOXp6mdl10jGaN2DDa4UJD4hlP2o74COPHhzLhzz7A==?fccs=W251bGwsbnVsbCxudWxsLG51bGwsbnVsbCxudWxsLFsxNzEwNjc0NDY1LDg3NzAwMDAwMF0sbnVsbCxudWxsLG51bGwsW251bGwsWzcsNiwxMCw5XSxudWxsLDIsbnVsbCwiZW4tR0IiLG51bGwsbnVsbCxudWxsLG51bGwsbnVsbCwxXSwiaHR0cHM6Ly9yeWFuc3R1dG9yaWFscy5uZXQvaHRtbC10dXRvcmlhbC9odG1sLXRlbXBsYXRlLnBocCIsbnVsbCxbWzgsIklJVXREU1FSUWtNIl0sWzksImVuLVVTIl0sWzE4LCJbW1swXV1dIl0sWzE5LCIyIl1dXQ"></script></head>
+
+<body role="document" data-spy="scroll" data-target="#sidebox" data-offset="90" style=""> 
+	<header id="ryansheader">
+	<div class="container">
+		<div class="col-sm-12">
+			<a id="ryantitle" href="/" title="A collection of Technology Tutorials">Ryans Tutorials</a>
+			
+			<div class="btn-toolbar pull-right">
+				<div class="btn-group mega-dropdown">
+					<button class="btn btn-info btn-sm dropdown-toggle" data-toggle="dropdown">More Tutorials <span class="caret"></span></button>
+					<ul class="dropdown-menu pull-right mega-dropdown-menu row">
+						<li class="col-sm-3">
+							<ul>
+								<li class="dropdown-header">Linux</li>
+								<li><a href="/linuxtutorial/"><span><img src="/img/round/tux_48.png" alt="Tux"><p>Linux Tutorial</p></span></a></li>
+								<li><a href="/bash-scripting-tutorial/"><span><img src="/img/round/hammer_48.png" alt="Hammer"><p>Bash Scripting Tutorial</p></span></a></li>
+							</ul>
+						</li>
+						<li class="col-sm-3">
+							<ul>
+								<li class="dropdown-header">Web</li>
+								<li><a href="/html-tutorial/"><span><img src="/img/round/html_48.png" alt="HTML"><p>HTML Tutorial</p></span></a></li>
+								<li><a href="/css-tutorial/"><span><img src="/img/round/css_48.png" alt="CSS"><p>CSS Tutorial</p></span></a></li>
+								<li><a href="/website-development-challenges/"><span><img src="/img/round/experiment_48.png" alt="Experiment"><p>Website Development Challenges</p></span></a></li>
+							</ul>
+						</li>
+						<li class="col-sm-3">
+							<ul>
+								<li class="dropdown-header">General</li>
+								<li><a href="/binary-tutorial/"><span><img src="/img/round/abacus_48.png" alt="Abacus"><p>Binary Tutorial</p></span></a></li>
+								<li><a href="/regular-expressions-tutorial/"><span><img src="/img/round/search_48.png" alt="Search"><p>Regular Expressions Tutorial</p></span></a></li>
+								<li><a href="/boolean-algebra-tutorial/"><span><img src="/img/round/config_48.png" alt="Switches"><p>Boolean Algebra Tutorial</p></span></a></li>
+								<li><a href="/rubiks-cube-tutorial/"><span><img src="/img/round/cube_48.png" alt="Rubiks Cube"><p>Solve the Cube</p></span></a></li>
+								<li><a href="/pygame-tutorial/"><span><img src="/img/round/pygame_48.png" alt="PyGame"><p>PyGame Tutorial</p></span></a></li>
+							</ul>
+						</li>
+						<li class="col-sm-3">
+							<ul>
+								<li class="dropdown-header">&nbsp;</li>
+								<li><a href="/problem-solving-skills/"><span><img src="/img/round/map_48.png" alt="Map"><p>Problem Solving Skills</p></span></a></li>
+								<li><a href="/graphic-design-tutorial/"><span><img src="/img/round/brush_48.png" alt="Brush"><p>Basic Graphic Design</p></span></a></li>
+								<li><a href="/programming-challenges/"><span><img src="/img/round/rocket_48.png" alt="Rocket"><p>Programming Challenges</p></span></a></li>
+								<li><a href="/software-design-and-development/"><span><img src="/img/round/browser_48.png" alt="Software"><p>Software Design and Development</p></span></a></li>
+								<li><a href="/microbit-tutorial/"><span><img src="/img/round/microbit_48.png" alt="micro:bit"><p>micro:bit tutorial</p></span></a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</header> 
+	
+	<!-- Fixed navbar -->
+	<div id="tutorialheader" class="navbar navbar-inverse navbar-static affix-top" role="navigation" data-spy="affix" data-offset-top="40">
+		<div class="container">
+			<h1>HTML Tutorial - 3. Basic Template</h1>
+			
+			<div class="btn-toolbar pull-right">
+								<div class="btn-group">
+					<button class="btn btn-info btn-sm dropdown-toggle" data-toggle="dropdown">Tutorial Sections <span class="caret"></span></button>
+					<ul class="dropdown-menu pull-right">
+					<li><a href="./">Introduction</a></li><li><a href="./html-background.php">1. Background Information</a></li><li><a href="./html.php">2. The Basics</a></li><li class="active"><a href="./html-template.php">3. Basic Template</a></li><li><a href="./html-basic-tags.php">4. Headings and Paragraphs</a></li><li><a href="./html-simple-formatting.php">5. Simple Formatting</a></li><li><a href="./html-more-formatting.php">6. More Formatting</a></li><li><a href="./html-links.php">7. Links</a></li><li><a href="./html-images.php">8. Images</a></li><li><a href="./html-lists.php">9. Lists</a></li><li><a href="./html-tables.php">10. Tables</a></li><li><a href="./html-final-thoughts.php">11. Final Thoughts</a></li>					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="container" style="height: auto !important;">
+		<div class="row" style="height: auto !important;">
+			<div class="col-md-9" style="height: auto !important; min-height: 0px !important;">
+				<div class="jumbotron">
+					<h2>Basic Template!</h2>
+					<p>How every HTML document begins.</p>
+				</div>
+				
+				<h2 id="introduction" class="introduction">Introduction</h2>
+				
+				<div class="pull-right"><style>
+			.ryanstutorials-html-top { width: 300px; height: 250px; }
+			@media(min-width: 500px) { .ryanstutorials-html-top { width: 336px; height: 280px; } }
+			@media(min-width: 800px) { .ryanstutorials-html-top { width: 336px; height: 280px; } }
+			</style>
+			<script src="https://pagead2.googlesyndication.com/pagead/managed/js/adsense/m202403130201/reactive_library_fy2021.js"></script><script src="https://pagead2.googlesyndication.com/pagead/managed/js/adsense/m202403130201/show_ads_impl_fy2021.js"></script><script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+			<!-- RyansTutorials HTML Top -->
+			<ins class="adsbygoogle ryanstutorials-html-top" style="display: inline-block; width: 336px; height: 280px;" data-ad-client="ca-pub-9971420945046594" data-ad-slot="1004326471" data-adsbygoogle-status="done" data-ad-status="filled"><div id="aswift_0_host" tabindex="0" title="Advertisement" aria-label="Advertisement" style="border: none; height: 280px; width: 336px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block;"><iframe id="aswift_0" name="aswift_0" browsingtopics="true" style="left:0;position:absolute;top:0;border:0;width:336px;height:280px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="336" height="280" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allow="attribution-reporting; run-ad-auction" src="https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-9971420945046594&amp;output=html&amp;h=280&amp;slotname=1004326471&amp;adk=400299447&amp;adf=2187122167&amp;pi=t.ma~as.1004326471&amp;w=336&amp;lmt=1710674463&amp;rafmt=12&amp;format=336x280&amp;url=https%3A%2F%2Fryanstutorials.net%2Fhtml-tutorial%2Fhtml-template.php&amp;wgl=1&amp;uach=WyJXaW5kb3dzIiwiMTUuMC4wIiwieDg2IiwiIiwiMTIyLjAuNjI2MS4xMjkiLG51bGwsMCxudWxsLCI2NCIsW1siQ2hyb21pdW0iLCIxMjIuMC42MjYxLjEyOSJdLFsiTm90KEE6QnJhbmQiLCIyNC4wLjAuMCJdLFsiR29vZ2xlIENocm9tZSIsIjEyMi4wLjYyNjEuMTI5Il1dLDBd&amp;dt=1710674463217&amp;bpp=3&amp;bdt=771&amp;idt=258&amp;shv=r20240313&amp;mjsv=m202403130201&amp;ptt=9&amp;saldr=aa&amp;abxe=1&amp;correlator=2704650797701&amp;frm=20&amp;pv=2&amp;ga_vid=1933740530.1710674463&amp;ga_sid=1710674463&amp;ga_hid=1378541736&amp;ga_fc=1&amp;u_tz=180&amp;u_his=4&amp;u_h=1080&amp;u_w=1920&amp;u_ah=1032&amp;u_aw=1920&amp;u_cd=24&amp;u_sd=1&amp;dmc=8&amp;adx=893&amp;ady=516&amp;biw=1903&amp;bih=945&amp;scr_x=0&amp;scr_y=0&amp;eid=44759876%2C44759927%2C44759842%2C44795921%2C95326317%2C95327950%2C95327954%2C95320377%2C95325784%2C31078663%2C31078665%2C31078668%2C31078670&amp;oid=2&amp;pvsid=3581017877665505&amp;tmod=922467545&amp;uas=0&amp;nvt=1&amp;ref=https%3A%2F%2Fwww.google.com%2F&amp;fc=896&amp;brdim=0%2C0%2C0%2C0%2C1920%2C0%2C1920%2C1032%2C1920%2C945&amp;vis=1&amp;rsz=%7C%7CleE%7C&amp;abl=CS&amp;pfx=0&amp;fu=256&amp;bc=31&amp;bz=1&amp;td=1&amp;psd=W251bGwsbnVsbCxudWxsLDNd&amp;nt=1&amp;ifi=1&amp;uci=a!1&amp;fsb=1&amp;dtd=270" data-google-container-id="a!1" data-google-query-id="CPK20_-W-4QDFWKp_QcdJRgNgg" data-load-complete="true"></iframe></div></ins>
+			<script>
+			(adsbygoogle = window.adsbygoogle || []).push({});
+			</script>
+			</div>				
+				<p>Now we'll get to dive in and play with some code.  This section will introduce the basic HTML template.  This template has the basic structure that every document should follow, as well as a few other extra bits to help manage the document.</p>
+				
+				
+				<h2 id="template">The Basic Template</h2>
+				
+				<p>Here is the basic template.  This template should be the starting point for every HTML page you write.  The rest of this section will deconstruct and explain it.</p>
+				
+				<p>&nbsp;</p>
+				
+				<div class="page">
+					<h4>template.html</h4>
+					
+					<ol>
+						<li><span class="highlight-blue">&lt;<b>!doctype</b> html&gt;</span></li>
+						<li><span class="highlight-blue">&lt;<b>html</b>&gt;</span></li>
+						<li><span class="highlight-blue">&lt;<b>head</b>&gt;</span></li>
+						<li><span class="tab1"></span><span class="highlight-blue">&lt;<b>title</b>&gt;</span>Our Funky HTML Page<span class="highlight-blue">&lt;<b>/title</b>&gt;</span></li>
+						<li><span class="tab1"></span><span class="highlight-blue">&lt;<b>meta</b> <span class="highlight-green">name</span>=<span class="highlight-red">"description"</span> <span class="highlight-green">content</span>=<span class="highlight-red">"Our first page"</span>&gt;</span></li>
+						<li><span class="tab1"></span><span class="highlight-blue">&lt;<b>meta</b> <span class="highlight-green">name</span>=<span class="highlight-red">"keywords"</span> <span class="highlight-green">content</span>=<span class="highlight-red">"html tutorial template"</span>&gt;</span></li>
+						<li><span class="highlight-blue">&lt;<b>/head</b>&gt;</span></li>
+						<li></li>
+						<li><span class="highlight-blue">&lt;<b>body</b>&gt;</span></li>
+						<li><span class="tab1"></span>Content goes here.</li>
+						<li><span class="highlight-blue">&lt;<b>/body</b>&gt;</span></li>
+						<li><span class="highlight-blue">&lt;<b>/html</b>&gt;</span></li>
+					</ol>
+				</div>
+				
+				<p>Let's break it down:</p>
+				
+				<ul>
+					<li><b>Line 1</b> - This is a special tag which goes at the very top of the document and identifies what type of code is being used.</li>
+					<li><b>Lines 2 and 12</b> - The <b>html</b> tags open and close the HTML document. Everything contained within is part of the document.</li>
+					<li><b>Lines 3 and 7</b> - The <b>head</b> tags define the head of the document.  Items here are extra data that goes along with the document.</li>
+					<li><b>Line 4</b> - The <b>title</b> tag defines the title of the document.  You'll notice it shows up at the top of the browser window.</li>
+					<li><b>Lines 5 and 6</b> - The <b>meta</b> tags are used to describe the document.</li>
+					<li><b>Lines 9 and 11</b> - The <b>body</b> tags enclose the actual content which is the document.</li>
+				</ul>
+				
+				<div class="browser">
+					<div class="browser-title">Our Funky HTML Page</div>
+					
+					<div class="browser-content">
+						Content goes here.
+					</div>
+				</div>
+				
+				
+				<h2 id="doctype">The DocType</h2>
+				
+				<p>The first tag on each page should always be this tag.  It should go at the very top, before the <b>html</b> tag.  You'll notice that, unlike the other tags, this one begins with an exalamation mark ( ! ).</p>  
+				
+				<p class="commandoutline">&lt;!doctype html&gt;</p>
+				
+				<p>Technically it is not a tag but an instruction to the brower on how to interpret the rest of the document.  For HTML 5 we simply refer to the type as <b>html</b>.  For previous versions of HTML there were different types that it could be so it was important to specify which.</p>
+				
+				
+				<h2 id="head">The Head</h2>
+				
+				<p class="commandoutline">&lt;head&gt; &lt;/head&gt;</p>
+				
+				<p>The <b>head</b> of the html document is where ancilliary information goes.  This is information relating to the document but not directly part of the document.  There are many items which can go here but the template above includes the basic items which every page should have.</p>
+				
+				
+				<h3>The Title</h3>
+				
+				<p class="commandoutline">&lt;title&gt; &lt;/title&gt;</p>
+				
+				<p>The <b>title</b> tag allows us to give the document a title.  This is used in several places:</p>
+				
+				<ul>
+					<li>The browser will include it at the top of the window.</li>
+					<li>If you save the page as a favourite the title will be used here.</li>
+					<li>Search engines use the title when they list your page in their search results.</li>
+					<li>Other sites may use the title when someone links to your page.</li>
+					<li>And others...</li>
+				</ul>
+				
+				<p>The <b>title</b> tag can be quite important given all the places it is used.  You should take the time to make sure it is descriptive and concise.</p>
+				
+				<div class="best">
+					<p>Search engines generally only show the first 65 characters of the title (give or take a few characters).  You should aim to keep your <b>title</b> to less than this amount.</p>  
+				</div>
+				
+				<p>A well written <b>title</b> can encourage more people to click on your page when it shows up on Search Engine Results Pages.</p>
+				
+				
+				<h3>Meta Tags</h3>
+				
+				<p class="commandoutline">&lt;meta name="description" value=""&gt;<br> &lt;meta name="keywords" value=""&gt;</p>
+				
+				<p>Next in the <b>head</b> we have the two <b>meta</b> tags for description and keywords.  These are used by search engines (to varying degrees) and can also be used by other systems (such as when your page is linked to on social media and other sharing sites).</p><div class="google-auto-placed ap_container" style="width: 100%; height: auto; clear: both; text-align: center;"><ins data-ad-format="auto" class="adsbygoogle adsbygoogle-noablate" data-ad-client="ca-pub-9971420945046594" data-adsbygoogle-status="done" style="display: block; margin: auto; background-color: transparent; height: 280px;" data-ad-status="filled"><div id="aswift_4_host" tabindex="0" title="Advertisement" aria-label="Advertisement" style="border: none; height: 280px; width: 848px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block; overflow: visible;"><iframe id="aswift_4" name="aswift_4" browsingtopics="true" style="left:0;position:absolute;top:0;border:0;width:848px;height:280px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="848" height="280" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allow="attribution-reporting; run-ad-auction" src="https://googleads.g.doubleclick.net/pagead/ads?gdpr=0&amp;us_privacy=1---&amp;gpp_sid=-1&amp;client=ca-pub-9971420945046594&amp;output=html&amp;h=280&amp;adk=1803510246&amp;adf=333044141&amp;pi=t.aa~a.859010759~i.55~rp.4&amp;w=848&amp;fwrn=4&amp;fwrnh=100&amp;lmt=1710674464&amp;num_ads=1&amp;rafmt=1&amp;armr=3&amp;sem=mc&amp;pwprc=8091777890&amp;ad_type=text_image&amp;format=848x280&amp;url=https%3A%2F%2Fryanstutorials.net%2Fhtml-tutorial%2Fhtml-template.php&amp;fwr=0&amp;pra=3&amp;rh=200&amp;rw=847&amp;rpe=1&amp;resp_fmts=3&amp;wgl=1&amp;fa=27&amp;uach=WyJXaW5kb3dzIiwiMTUuMC4wIiwieDg2IiwiIiwiMTIyLjAuNjI2MS4xMjkiLG51bGwsMCxudWxsLCI2NCIsW1siQ2hyb21pdW0iLCIxMjIuMC42MjYxLjEyOSJdLFsiTm90KEE6QnJhbmQiLCIyNC4wLjAuMCJdLFsiR29vZ2xlIENocm9tZSIsIjEyMi4wLjYyNjEuMTI5Il1dLDBd&amp;dt=1710674464394&amp;bpp=1&amp;bdt=1948&amp;idt=-M&amp;shv=r20240313&amp;mjsv=m202403130201&amp;ptt=9&amp;saldr=aa&amp;abxe=1&amp;cookie=ID%3D951cf7e2e442e732%3AT%3D1710674467%3ART%3D1710674467%3AS%3DALNI_MaFE0ubZX8IY0tvXkjkvIN5bBAhCw&amp;gpic=UID%3D00000d73a86b4627%3AT%3D1710674467%3ART%3D1710674467%3AS%3DALNI_MYyF1jcSwunnp3A-CXjRvaaloqx6w&amp;eo_id_str=ID%3D4994e24d528e268b%3AT%3D1710674467%3ART%3D1710674467%3AS%3DAA-AfjZWYOIwsq0Be1ZsUVBjbQmQ&amp;prev_fmts=336x280%2C728x90%2C0x0&amp;nras=2&amp;correlator=2704650797701&amp;frm=20&amp;pv=1&amp;ga_vid=1933740530.1710674463&amp;ga_sid=1710674463&amp;ga_hid=1378541736&amp;ga_fc=1&amp;u_tz=180&amp;u_his=4&amp;u_h=1080&amp;u_w=1920&amp;u_ah=1032&amp;u_aw=1920&amp;u_cd=24&amp;u_sd=1&amp;dmc=8&amp;adx=382&amp;ady=2722&amp;biw=1903&amp;bih=945&amp;scr_x=0&amp;scr_y=6&amp;eid=44759876%2C44759927%2C44759842%2C44795921%2C95326317%2C95327950%2C95327954%2C95320377%2C95325784%2C31078663%2C31078665%2C31078668%2C31078670&amp;oid=2&amp;psts=AOrYGsmIpZ8c9jQdgM6CA30b9GH4Fl8jkGTH4Dq2mBGDlatOG9MbomBtu0D4aLaGO9HYwOyyKCIud0YZKu6_2H85du5uZA&amp;pvsid=3581017877665505&amp;tmod=922467545&amp;uas=0&amp;nvt=1&amp;ref=https%3A%2F%2Fwww.google.com%2F&amp;fc=384&amp;brdim=0%2C0%2C0%2C0%2C1920%2C0%2C1920%2C1032%2C1920%2C945&amp;vis=1&amp;rsz=%7C%7Cs%7C&amp;abl=NS&amp;fu=128&amp;bc=31&amp;bz=1&amp;td=1&amp;psd=W251bGwsbnVsbCxudWxsLDNd&amp;nt=1&amp;ifi=5&amp;uci=a!5&amp;btvi=2&amp;fsb=1&amp;dtd=357" data-google-container-id="a!5" data-google-query-id="CMuplYCX-4QDFTqA_QcdQFoHyw" data-load-complete="true"></iframe></div></ins></div>
+				
+				<p>The <b>description</b> is used to provide a summary of what the page is about.  Search engines will typically place this under your title in their results pages.</p>
+				
+				<div class="best">
+					<p>Search engines generally only show the first 155 characters of the description (give or take a few characters).  You should aim to keep your <b>description</b> to less than this amount.</p>  
+				</div>
+				
+				<p>Again, a well written description can encourage more people to click on your page when it shows up on Search Engine Results Pages.</p>
+				
+				<p>The <b>keywords</b> meta tag is used to provide a series of words which would match what the page is about.  Search engines used to place weight on this aspect of your page but it was abused to the point that it holds very little weight nowadays.  You should still include it however for completeness and also as it is estimated that some search engines will mark you down for not having it.  Their reasoning is that if you are lazy and can't be bothered putting this tag in then you're probably lazy in other areas too so the quality of your page, in their opinion, is less.</p>
+				
+				<div class="block-center"><style>
+			.ryanstutorials-html-middle { width: 320px; height: 50px; }
+			@media(min-width: 500px) { .ryanstutorials-html-middle { width: 468px; height: 60px; } }
+			@media(min-width: 750px) { .ryanstutorials-html-middle { width: 728px; height: 90px; } }
+			</style>
+			<script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+			<!-- RyansTutorials HTML Middle -->
+			<ins class="adsbygoogle ryanstutorials-html-middle" style="display: inline-block; width: 728px; height: 0px;" data-ad-client="ca-pub-9971420945046594" data-ad-slot="2481059678" data-adsbygoogle-status="done" data-ad-status="unfilled"><div id="aswift_1_host" tabindex="0" title="Advertisement" aria-label="Advertisement" style="border: none; height: 0px; width: 728px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block; overflow: hidden; opacity: 0;"><iframe id="aswift_1" name="aswift_1" browsingtopics="true" style="left: 0px; position: absolute; top: 0px; border: 0px; width: 728px; height: 0px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="728" height="0" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allow="attribution-reporting; run-ad-auction" src="https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-9971420945046594&amp;output=html&amp;h=90&amp;slotname=2481059678&amp;adk=3437602008&amp;adf=3620287499&amp;pi=t.ma~as.2481059678&amp;w=728&amp;lmt=1710674463&amp;rafmt=12&amp;format=728x90&amp;url=https%3A%2F%2Fryanstutorials.net%2Fhtml-tutorial%2Fhtml-template.php&amp;wgl=1&amp;uach=WyJXaW5kb3dzIiwiMTUuMC4wIiwieDg2IiwiIiwiMTIyLjAuNjI2MS4xMjkiLG51bGwsMCxudWxsLCI2NCIsW1siQ2hyb21pdW0iLCIxMjIuMC42MjYxLjEyOSJdLFsiTm90KEE6QnJhbmQiLCIyNC4wLjAuMCJdLFsiR29vZ2xlIENocm9tZSIsIjEyMi4wLjYyNjEuMTI5Il1dLDBd&amp;dt=1710674463222&amp;bpp=18&amp;bdt=776&amp;idt=269&amp;shv=r20240313&amp;mjsv=m202403130201&amp;ptt=9&amp;saldr=aa&amp;abxe=1&amp;prev_fmts=336x280&amp;correlator=2704650797701&amp;frm=20&amp;pv=1&amp;ga_vid=1933740530.1710674463&amp;ga_sid=1710674463&amp;ga_hid=1378541736&amp;ga_fc=1&amp;u_tz=180&amp;u_his=4&amp;u_h=1080&amp;u_w=1920&amp;u_ah=1032&amp;u_aw=1920&amp;u_cd=24&amp;u_sd=1&amp;dmc=8&amp;adx=441&amp;ady=3111&amp;biw=1903&amp;bih=945&amp;scr_x=0&amp;scr_y=0&amp;eid=44759876%2C44759927%2C44759842%2C44795921%2C95326317%2C95327950%2C95327954%2C95320377%2C95325784%2C31078663%2C31078665%2C31078668%2C31078670&amp;oid=2&amp;pvsid=3581017877665505&amp;tmod=922467545&amp;uas=0&amp;nvt=1&amp;ref=https%3A%2F%2Fwww.google.com%2F&amp;fc=896&amp;brdim=0%2C0%2C0%2C0%2C1920%2C0%2C1920%2C1032%2C1920%2C945&amp;vis=1&amp;rsz=%7C%7CeEbr%7C&amp;abl=CS&amp;pfx=0&amp;fu=256&amp;bc=31&amp;bz=1&amp;td=1&amp;psd=W251bGwsbnVsbCxudWxsLDNd&amp;nt=1&amp;ifi=2&amp;uci=a!2&amp;btvi=1&amp;fsb=1&amp;dtd=271" data-google-container-id="a!2" data-google-query-id="COCt0_-W-4QDFfS__Qcd2t4MJQ" data-load-complete="true"></iframe></div></ins>
+			<script>
+			(adsbygoogle = window.adsbygoogle || []).push({});
+			</script>
+			</div>				
+				
+				<h2 id="body">The Body</h2>
+				
+				<p class="commandoutline">&lt;body&gt; &lt;/body&gt;</p>
+				
+				<p>This is where the actual content of your page goes.  Typically this content would all be contained within tags to explain what type of content it is.  In the example above we have left this out just to keep things simple.  In the next section we'll start to show you what type of tags may be used.</p>
+				
+				<p>It is important that all of your content is between the opening and closing <b>body</b> tags.</p>
+				
+				
+				<h2 id="breaking">Breaking the Rules</h2>
+				
+				<p>If you copy the file above (template.html) into your own file and open it within a browser you will see a basic page.  Experimenting with it, you will see that you can actually break the rules in quite a few different ways and the browser will happily play along.</p>
+				
+				<p>Browser vendors realise there is quite a bit of poorly written HTML out there.  In an effort to provide the best experience to their users they will do their best effort to work around any errors they come across.</p><div class="google-auto-placed ap_container" style="width: 100%; height: auto; clear: both; text-align: center;"><ins data-ad-format="auto" class="adsbygoogle adsbygoogle-noablate" data-ad-client="ca-pub-9971420945046594" data-adsbygoogle-status="done" style="display: block; margin: auto; background-color: transparent; height: 280px;" data-ad-status="filled"><div id="aswift_5_host" tabindex="0" title="Advertisement" aria-label="Advertisement" style="border: none; height: 280px; width: 848px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block; overflow: visible;"><iframe id="aswift_5" name="aswift_5" browsingtopics="true" style="left:0;position:absolute;top:0;border:0;width:848px;height:280px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="848" height="280" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allow="attribution-reporting; run-ad-auction" src="https://googleads.g.doubleclick.net/pagead/ads?gdpr=0&amp;us_privacy=1---&amp;gpp_sid=-1&amp;client=ca-pub-9971420945046594&amp;output=html&amp;h=280&amp;adk=1803510246&amp;adf=4161333824&amp;pi=t.aa~a.859010759~i.79~rp.4&amp;w=848&amp;fwrn=4&amp;fwrnh=100&amp;lmt=1710674464&amp;num_ads=1&amp;rafmt=1&amp;armr=3&amp;sem=mc&amp;pwprc=8091777890&amp;ad_type=text_image&amp;format=848x280&amp;url=https%3A%2F%2Fryanstutorials.net%2Fhtml-tutorial%2Fhtml-template.php&amp;fwr=0&amp;pra=3&amp;rh=200&amp;rw=847&amp;rpe=1&amp;resp_fmts=3&amp;wgl=1&amp;fa=27&amp;uach=WyJXaW5kb3dzIiwiMTUuMC4wIiwieDg2IiwiIiwiMTIyLjAuNjI2MS4xMjkiLG51bGwsMCxudWxsLCI2NCIsW1siQ2hyb21pdW0iLCIxMjIuMC42MjYxLjEyOSJdLFsiTm90KEE6QnJhbmQiLCIyNC4wLjAuMCJdLFsiR29vZ2xlIENocm9tZSIsIjEyMi4wLjYyNjEuMTI5Il1dLDBd&amp;dt=1710674464277&amp;bpp=1&amp;bdt=1831&amp;idt=0&amp;shv=r20240313&amp;mjsv=m202403130201&amp;ptt=9&amp;saldr=aa&amp;abxe=1&amp;cookie=ID%3D951cf7e2e442e732%3AT%3D1710674467%3ART%3D1710674467%3AS%3DALNI_MaFE0ubZX8IY0tvXkjkvIN5bBAhCw&amp;gpic=UID%3D00000d73a86b4627%3AT%3D1710674467%3ART%3D1710674467%3AS%3DALNI_MYyF1jcSwunnp3A-CXjRvaaloqx6w&amp;eo_id_str=ID%3D4994e24d528e268b%3AT%3D1710674467%3ART%3D1710674467%3AS%3DAA-AfjZWYOIwsq0Be1ZsUVBjbQmQ&amp;prev_fmts=336x280%2C728x90%2C0x0%2C848x280%2C160x600%2C160x600&amp;nras=5&amp;correlator=2704650797701&amp;frm=20&amp;pv=1&amp;ga_vid=1933740530.1710674463&amp;ga_sid=1710674463&amp;ga_hid=1378541736&amp;ga_fc=1&amp;u_tz=180&amp;u_his=4&amp;u_h=1080&amp;u_w=1920&amp;u_ah=1032&amp;u_aw=1920&amp;u_cd=24&amp;u_sd=1&amp;dmc=8&amp;adx=382&amp;ady=3919&amp;biw=1903&amp;bih=945&amp;scr_x=0&amp;scr_y=150&amp;eid=44759876%2C44759927%2C44759842%2C44795921%2C95326317%2C95327950%2C95327954%2C95320377%2C95325784%2C31078663%2C31078665%2C31078668%2C31078670&amp;oid=2&amp;psts=AOrYGsmIpZ8c9jQdgM6CA30b9GH4Fl8jkGTH4Dq2mBGDlatOG9MbomBtu0D4aLaGO9HYwOyyKCIud0YZKu6_2H85du5uZA&amp;pvsid=3581017877665505&amp;tmod=922467545&amp;uas=0&amp;nvt=1&amp;ref=https%3A%2F%2Fwww.google.com%2F&amp;fc=384&amp;brdim=0%2C0%2C0%2C0%2C1920%2C0%2C1920%2C1032%2C1920%2C945&amp;vis=1&amp;rsz=%7C%7Cs%7C&amp;abl=NS&amp;fu=128&amp;bc=31&amp;bz=1&amp;td=1&amp;psd=W251bGwsbnVsbCxudWxsLDNd&amp;nt=1&amp;ifi=6&amp;uci=a!6&amp;btvi=5&amp;fsb=1&amp;dtd=572" data-google-container-id="a!6" data-google-query-id="CLekm4CX-4QDFTOW_QcdLQYALQ" data-load-complete="true"></iframe></div></ins></div>
+				
+				<p>Don't take this as an excuse to be lazy and write poor code however.</p>  
+				
+				<ul>
+					<li>It may work now but future versions of browsers may not be as lenient.</li>
+					<li>It can also get you into trouble later on when adding CSS and javascript.</li>
+					<li>Search engines often look at the quality of your code as an indicator of the quality of your content.  If they see HTML errors it can harm your rankings.</li>
+				</ul>
+				
+				
+				<h2 id="summary">Summary</h2>
+				<div class="stuffwelearnt">
+					<dl>
+						<dt>&lt;!doctype html&gt;</dt>
+						<dd>Specifies that this is a HTML document.</dd>
+						
+						<dt>&lt;html&gt; &lt;/html&gt;</dt>
+						<dd>Defines the actual HTML document.</dd>
+						
+						<dt>&lt;head&gt; &lt;/head&gt;</dt>
+						<dd>A container to put ancilliary information which goes with the document.</dd>
+						
+						<dt>&lt;title&gt; &lt;/title&gt;</dt>
+						<dd>A container to define the title of the document.</dd>
+						
+						<dt>&lt;meta&gt;</dt>
+						<dd>Defines information describing the document.</dd>
+						
+						<dt>&lt;body&gt; &lt;/body&gt;</dt>
+						<dd>A container to hold the content of the document.</dd>
+					</dl>
+				</div>
+				
+				<div class="importantconcepts">
+					<dl>
+						<dt>Starting Point</dt>
+						<dd>Every document you write should start with this basic template.</dd>
+						
+						<dt>Breaking the rules</dt>
+						<dd>Browsers will let you break the rules.  This doesn't mean you should.</dd>
+					</dl>
+				</div>
+				
+				<h2 id="activities">Activities</h2>
+				
+				<p>Now let's play about and create our first page.</p>
+				
+				<ul class="activities">
+					<li>Copy the template above into your own file and open it within a browser. Observe where the title is displayed.</li>
+					
+					<li>Find out how to open your browsers <a href="./html-background.php#debugging">inspection tool</a> and have a bit of an explore.  You won't see much for now but it will become more useful as we add more to our document.</li>
+					
+					<li>Make a copy of the document and open that in your browser.  Now break it in various ways and see what you can and can't get away with.  Here are a few things to try:
+						<ul>
+							<li>put content in various places outside the <b>body</b> tags.</li>
+							<li>leave out or misspell different tags.</li>
+							<li>try adding duplicates of tags, eg. what happens if you have two or more body or title tags?</li>
+						</ul></li>
+				</ul>
+				
+				<p>As we work through this tutorial, each section will add new tags allowing you to do more interesting things.  My suggestion would be that you pick a topic or subject of interest to you and create a page about that.  As you work through each section add to and improve the page with the new tags you have learnt.</p>
+				
+				<div class="block-center"><style>
+			.ryanstutorials-html-bottom { width: 320px; height: 50px; }
+			@media(min-width: 500px) { .ryanstutorials-html-bottom { width: 468px; height: 60px; } }
+			@media(min-width: 750px) { .ryanstutorials-html-bottom { width: 728px; height: 90px; } }
+			</style>
+			<script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+			<!-- RyansTutorials HTML Bottom -->
+			<ins class="adsbygoogle ryanstutorials-html-bottom" style="display: inline-block; width: 728px; height: 90px;" data-ad-client="ca-pub-9971420945046594" data-ad-slot="3957792872" data-adsbygoogle-status="done"><div id="aswift_2_host" style="border: none; height: 90px; width: 728px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block;"></div></ins>
+			<script>
+			(adsbygoogle = window.adsbygoogle || []).push({});
+			</script>
+			</div>				
+				
+				<div id="bottomnavigation">
+					<div class="pull-left"><a href="./"><span class="glyphicon glyphicon-chevron-left"></span> HTML Home</a></div>
+					<div class="pull-right"><a href="./html-basic-tags.php">Basic Tags <span class="glyphicon glyphicon-chevron-right"></span></a></div>
+				</div>
+				
+			</div>
+			<div class="col-md-3" id="sideboxcol">
+				<div class="well sidebar-nav hidden-xs hidden-sm affix-top" id="sidebox" data-spy="affix" data-offset-top="40" style="width: 263px;">
+					<ul class="nav nav-list">
+						<li class="nav-header">Section Breakdown</li>
+						<li class=""><a href="#introduction">Introduction</a></li>
+						<li><a href="#template">The Basic Template</a></li>
+						<li><a href="#doctype">The DocType</a></li>
+						<li><a href="#head">The Head</a></li>
+						<li><a href="#body">The Body</a></li>
+						<li><a href="#breaking">Breaking the Rules</a></li>
+						<li><a href="#summary">Summary</a></li>
+						<li><a href="#activities">Activities</a></li>
+						<li class="nav-header">Next Section</li>
+						<li><a href="./html-basic-tags.php">Basic Tags</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="container-fluid footer-background margin-top">
+	<div class="row-fluid">
+		<div class="col-md-12">
+			<div class="container">
+				<footer>
+					<p>By <a href="https://plus.google.com/105636787773904848687" rel="author">Ryan Chadwick</a> © 2024 <span style="margin-left:30px;"><iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" class="twitter-follow-button twitter-follow-button-rendered" style="position: static; visibility: visible; width: 156px; height: 20px;" title="Twitter Follow Button" src="https://platform.twitter.com/widgets/follow_button.2f70fb173b9000da126c79afe2098f02.en.html#dnt=false&amp;id=twitter-widget-0&amp;lang=en&amp;screen_name=funcreativity&amp;show_count=false&amp;show_screen_name=true&amp;size=m&amp;time=1710674464782" data-screen-name="funcreativity"></iframe></span><script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+				</footer>
+					
+				<div id="footerbar"></div> 
+
+				<div class="row">
+					<div class="col-sm-3 tutorial-outline">
+						<a href="/" title="Kindle the flame">
+							<img src="/img/round/fire_64.png" alt="Flame">
+							<h4>Home</h4>
+						</a>
+					</div>
+					<div class="col-sm-3 tutorial-outline">
+						<a href="/linuxtutorial/">
+							<img src="/img/round/tux_64.png" alt="Tux">
+							<h4>Linux Tutorial</h4>
+						</a>
+					</div>
+					<div class="col-sm-3 tutorial-outline">
+						<a href="/html-tutorial/">
+							<img src="/img/round/html_64.png" alt="HTML">
+							<h4>HTML Tutorial</h4>
+						</a>
+					</div>
+					<div class="col-sm-3 tutorial-outline">
+						<a href="/binary-tutorial/">
+							<img src="/img/round/abacus_64.png" alt="Abacus">
+							<h4>Binary Tutorial</h4>
+						</a>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-3">
+						<p>Education is the kindling of a flame, <br>not the filling of a vessel.<br>
+						<i>- Socrates</i></p>
+						
+						<p><a href="/contact.php">Contact</a> | <a href="/disclaimer.php" title="Privacy Policy, Terms of Use and Disclaimer">Disclaimer</a></p>
+					</div>
+					<div class="col-sm-3 tutorial-outline">
+						<a href="/bash-scripting-tutorial/">
+							<img src="/img/round/hammer_64.png" alt="Hammer">
+							<h4>Bash Scripting Tutorial</h4>
+						</a>
+					</div>
+					<div class="col-sm-3 tutorial-outline">
+						<a href="/css-tutorial/">
+							<img src="/img/round/css_64.png" alt="CSS">
+							<h4>CSS Tutorial</h4>
+						</a>
+					</div>
+					<div class="col-sm-3 tutorial-outline">
+						<a href="/regular-expressions-tutorial/">
+							<img src="/img/round/search_64.png" alt="Search">
+							<h4>Regular Expressions</h4>
+						</a>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-offset-3 col-sm-3 tutorial-outline">
+						<a href="/programming-challenges/">
+							<img src="/img/round/rocket_64.png" alt="Rocket">
+							<h4>Programming Challenges</h4>
+						</a>
+					</div>
+					<div class="col-sm-3 tutorial-outline">
+						<a href="/problem-solving-skills/">
+							<img src="/img/round/map_64.png" alt="Map">
+							<h4>Problem Solving</h4>
+						</a>
+					</div>
+					<div class="col-sm-3 tutorial-outline">
+						<a href="/boolean-algebra-tutorial/">
+							<img src="/img/round/config_64.png" alt="Switches">
+							<h4>Boolean Algebra Tutorial</h4>
+						</a>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-offset-3 col-sm-3 tutorial-outline">
+						<a href="/graphic-design-tutorial/">
+							<img src="/img/round/brush_64.png" alt="Paint Brush">
+							<h4>Basic Design Tutorial</h4>
+						</a>
+					</div>
+					<div class="col-sm-3 tutorial-outline">
+						<a href="/rubiks-cube-tutorial/">
+							<img src="/img/round/cube_64.png" alt="Rubiks Cube">
+							<h4>Solve the Cube</h4>
+						</a>
+					</div>
+					<div class="col-sm-3 tutorial-outline">
+						<a href="/software-design-and-development/">
+							<img src="/img/round/browser_64.png" alt="Software">
+							<h4>Software Design and Development</h4>
+						</a>
+					</div>
+				</div>
+				<div class="row">
+                    <div class="col-sm-offset-3 col-sm-3 tutorial-outline">
+						<a href="/website-development-challenges/">
+							<img src="/img/round/experiment_64.png" alt="Experiments">
+							<h4>Website Development Challenges</h4>
+						</a>
+					</div>
+                    <div class="col-sm-3 tutorial-outline">
+						<a href="/thoughts/">
+							<img src="/img/round/typewriter_64.png" alt="Typewriter">
+							<h4>Thoughts</h4>
+						</a>
+					</div>
+					<div class="col-sm-3 tutorial-outline">
+						<a href="/microbit-tutorial/">
+							<img src="/img/round/microbit_64.png" alt="micro:bit">
+							<h4>micro:bit Tutorial</h4>
+						</a>
+					</div>
+				</div>
+				<div class="row">
+                    <div class="col-sm-offset-3 col-sm-3 tutorial-outline">
+						<a href="/pygame-tutorial/">
+							<img src="/img/round/pygame_64.png" alt="PyGame">
+							<h4>PyGame Tutorial</h4>
+						</a>
+					</div>
+					<div class="col-sm-3 tutorial-outline">
+						<a href="/spreadsheets/">
+							<img src="/img/round/spreadsheets_64.png" alt="Spreadsheets">
+							<h4>Spreadsheets Tips and Hints</h4>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div> 
+
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-77NVHSB7DG"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-77NVHSB7DG');
+</script>
+
+	<!--<div id='rhythm'></div>-->
+	
+	<!-- Bootstrap core JavaScript
+	================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/base.js"></script>
+	<script src="./js/javascript.js"></script>
+
+
+ 
+
+ 
+ 
+ 
+<ins class="adsbygoogle adsbygoogle-noablate" data-adsbygoogle-status="done" style="display: none !important;" data-ad-status="unfilled"><div id="aswift_3_host" tabindex="0" title="Advertisement" aria-label="Advertisement" style="border: none; height: 0px; width: 0px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block;"><iframe id="aswift_3" name="aswift_3" browsingtopics="true" style="left:0;position:absolute;top:0;border:0;width:undefinedpx;height:undefinedpx;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allow="attribution-reporting; run-ad-auction" src="https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-9971420945046594&amp;output=html&amp;adk=1812271804&amp;adf=3025194257&amp;lmt=1710674463&amp;plat=9%3A32776%2C16%3A8388608%2C17%3A32%2C24%3A32%2C25%3A32%2C30%3A1081344%2C32%3A32%2C41%3A32%2C42%3A32&amp;plas=308x848_l%7C366x848_r&amp;format=0x0&amp;url=https%3A%2F%2Fryanstutorials.net%2Fhtml-tutorial%2Fhtml-template.php&amp;pra=7&amp;wgl=1&amp;easpi=1&amp;asro=0&amp;aseiel=1~2~4~6~8~9~10~11~12~13~14~15~16~17~18~19~20~21&amp;uach=WyJXaW5kb3dzIiwiMTUuMC4wIiwieDg2IiwiIiwiMTIyLjAuNjI2MS4xMjkiLG51bGwsMCxudWxsLCI2NCIsW1siQ2hyb21pdW0iLCIxMjIuMC42MjYxLjEyOSJdLFsiTm90KEE6QnJhbmQiLCIyNC4wLjAuMCJdLFsiR29vZ2xlIENocm9tZSIsIjEyMi4wLjYyNjEuMTI5Il1dLDBd&amp;dt=1710674463310&amp;bpp=5&amp;bdt=864&amp;idt=187&amp;shv=r20240313&amp;mjsv=m202403130201&amp;ptt=9&amp;saldr=aa&amp;abxe=1&amp;prev_fmts=336x280%2C728x90&amp;nras=1&amp;correlator=2704650797701&amp;frm=20&amp;pv=1&amp;ga_vid=1933740530.1710674463&amp;ga_sid=1710674463&amp;ga_hid=1378541736&amp;ga_fc=1&amp;u_tz=180&amp;u_his=4&amp;u_h=1080&amp;u_w=1920&amp;u_ah=1032&amp;u_aw=1920&amp;u_cd=24&amp;u_sd=1&amp;dmc=8&amp;adx=-12245933&amp;ady=-12245933&amp;biw=1903&amp;bih=945&amp;scr_x=0&amp;scr_y=0&amp;eid=44759876%2C44759927%2C44759842%2C44795921%2C95326317%2C95327950%2C95327954%2C95320377%2C95325784%2C31078663%2C31078665%2C31078668%2C31078670&amp;oid=2&amp;pvsid=3581017877665505&amp;tmod=922467545&amp;uas=0&amp;nvt=1&amp;fsapi=1&amp;ref=https%3A%2F%2Fwww.google.com%2F&amp;fc=896&amp;brdim=0%2C0%2C0%2C0%2C1920%2C0%2C1920%2C1032%2C1920%2C945&amp;vis=1&amp;rsz=%7C%7Cs%7C&amp;abl=NS&amp;fu=32768&amp;bc=31&amp;bz=1&amp;td=1&amp;psd=W251bGwsbnVsbCxudWxsLDNd&amp;nt=1&amp;ifi=4&amp;uci=a!4&amp;fsb=1&amp;dtd=194" data-google-container-id="a!4" data-load-complete="true"></iframe></div></ins><iframe scrolling="no" frameborder="0" allowtransparency="true" src="https://platform.twitter.com/widgets/widget_iframe.2f70fb173b9000da126c79afe2098f02.html?origin=https%3A%2F%2Fryanstutorials.net" title="Twitter settings iframe" style="display: none;"></iframe><iframe name="googlefcPresent" style="display: none; width: 0px; height: 0px; border: none; z-index: -1000; left: -1000px; top: -1000px;"></iframe><ins class="adsbygoogle adsbygoogle-noablate" data-adsbygoogle-status="done" data-side-rail-status="displayed" data-ad-status="filled" style="display: block !important; z-index: 2147483647 !important; margin: 0px !important; padding: 0px !important; position: fixed !important; left: 133px !important; top: 47px !important; overflow: visible !important; opacity: 1 !important; transition: all 500ms ease-in 0s !important;"><div id="aswift_6_host" tabindex="0" title="Advertisement" aria-label="Advertisement" style="border: none; height: 600px; width: 160px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block;"><iframe id="aswift_6" name="aswift_6" browsingtopics="true" style="width:160px !IMPORTANT;height:600px !IMPORTANT" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="160" height="600" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allow="attribution-reporting; run-ad-auction" src="https://googleads.g.doubleclick.net/pagead/html/r20240313/r20110914/zrt_lookup_fy2021.html#RS-0-&amp;adk=1812271803&amp;client=ca-pub-9971420945046594&amp;fa=3&amp;ifi=7&amp;uci=a!7&amp;btvi=3" data-google-container-id="a!7" data-google-query-id="CP6u0_-W-4QDFb2W_QcdOtAB_g" data-load-complete="true"></iframe></div><span class="left-side-rail-edge" style="background: rgb(250, 250, 250) !important; position: absolute !important; left: 0px !important; top: 600px !important; width: 160px !important; height: 5px !important; box-shadow: rgba(0, 0, 0, 0.5) 0px 1px 5px -1px, rgba(0, 0, 0, 0.1) 0px -1px 2px -1px !important;"></span><span class="left-side-rail-dismiss-btn" style="background: rgb(250, 250, 250) !important; position: absolute !important; left: 55px !important; right: 55px !important; top: 605px !important; box-shadow: rgba(0, 0, 0, 0.5) 0px 1px 5px -1px, rgba(0, 0, 0, 0.1) 0px -1px 2px -1px !important;"><svg style="position: absolute !important; top: 0px !important; display: block !important; width: 50px !important; height: 30px !important; margin-top: -5px !important; transform: none !important; pointer-events: initial !important;"><defs><filter id="left-side-rail-drop-shadow" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feComponentTransfer in="SourceAlpha" result="TransferredAlpha"><feFuncR type="discrete" tableValues="0.5"></feFuncR><feFuncG type="discrete" tableValues="0.5"></feFuncG><feFuncB type="discrete" tableValues="0.5"></feFuncB></feComponentTransfer><feGaussianBlur in="TransferredAlpha" stdDeviation="2"></feGaussianBlur><feOffset dx="0" dy="0" result="offsetblur"></feOffset><feMerge><feMergeNode></feMergeNode><feMergeNode in="SourceGraphic"></feMergeNode></feMerge></filter></defs><path d="M5,5 L5,17 A8,8 0 0,0 13,25 L37,25 A8,8 0 0,0 45,17 L45,5 Z" stroke="#FAFAFA" stroke-width="1" fill="#FAFAFA" style="filter: url(&quot;#left-side-rail-drop-shadow&quot;);"></path><rect x="0" y="0" width="50" height="5" style="fill: rgb(250, 250, 250);"></rect><g stroke="#616161" stroke-width="2px" stroke-linecap="square"><line x1="18" y1="18" x2="25" y2="12"></line><line x1="25" y1="12" x2="32" y2="18"></line></g></svg></span></ins><ins class="adsbygoogle adsbygoogle-noablate" data-adsbygoogle-status="done" data-side-rail-status="displayed" data-ad-status="filled" style="display: block !important; z-index: 2147483647 !important; margin: 0px !important; padding: 0px !important; position: fixed !important; right: 191px !important; top: 47px !important; overflow: visible !important; opacity: 1 !important; transition: all 500ms ease-in 0s !important;"><div id="aswift_7_host" tabindex="0" title="Advertisement" aria-label="Advertisement" style="border: none; height: 600px; width: 160px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block;"><iframe id="aswift_7" name="aswift_7" browsingtopics="true" style="width:160px !IMPORTANT;height:600px !IMPORTANT" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="160" height="600" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allow="attribution-reporting; run-ad-auction" src="https://googleads.g.doubleclick.net/pagead/html/r20240313/r20110914/zrt_lookup_fy2021.html#RS-1-&amp;adk=1812271804&amp;client=ca-pub-9971420945046594&amp;fa=4&amp;ifi=8&amp;uci=a!8&amp;btvi=4" data-google-container-id="a!8" data-google-query-id="CICv0_-W-4QDFb2W_QcdOtAB_g" data-load-complete="true"></iframe></div><span class="right-side-rail-edge" style="background: rgb(250, 250, 250) !important; position: absolute !important; left: 0px !important; top: 600px !important; width: 160px !important; height: 5px !important; box-shadow: rgba(0, 0, 0, 0.5) 0px 1px 5px -1px, rgba(0, 0, 0, 0.1) 0px -1px 2px -1px !important;"></span><span class="right-side-rail-dismiss-btn" style="background: rgb(250, 250, 250) !important; position: absolute !important; left: 55px !important; right: 55px !important; top: 605px !important; box-shadow: rgba(0, 0, 0, 0.5) 0px 1px 5px -1px, rgba(0, 0, 0, 0.1) 0px -1px 2px -1px !important;"><svg style="position: absolute !important; top: 0px !important; display: block !important; width: 50px !important; height: 30px !important; margin-top: -5px !important; transform: none !important; pointer-events: initial !important;"><defs><filter id="right-side-rail-drop-shadow" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feComponentTransfer in="SourceAlpha" result="TransferredAlpha"><feFuncR type="discrete" tableValues="0.5"></feFuncR><feFuncG type="discrete" tableValues="0.5"></feFuncG><feFuncB type="discrete" tableValues="0.5"></feFuncB></feComponentTransfer><feGaussianBlur in="TransferredAlpha" stdDeviation="2"></feGaussianBlur><feOffset dx="0" dy="0" result="offsetblur"></feOffset><feMerge><feMergeNode></feMergeNode><feMergeNode in="SourceGraphic"></feMergeNode></feMerge></filter></defs><path d="M5,5 L5,17 A8,8 0 0,0 13,25 L37,25 A8,8 0 0,0 45,17 L45,5 Z" stroke="#FAFAFA" stroke-width="1" fill="#FAFAFA" style="filter: url(&quot;#right-side-rail-drop-shadow&quot;);"></path><rect x="0" y="0" width="50" height="5" style="fill: rgb(250, 250, 250);"></rect><g stroke="#616161" stroke-width="2px" stroke-linecap="square"><line x1="18" y1="18" x2="25" y2="12"></line><line x1="25" y1="12" x2="32" y2="18"></line></g></svg></span></ins><iframe name="__tcfapiLocator" src="about:blank" style="display: none; width: 0px; height: 0px; border: none; z-index: -1000; left: -1000px; top: -1000px;"></iframe><iframe name="__uspapiLocator" src="about:blank" style="display: none; width: 0px; height: 0px; border: none; z-index: -1000; left: -1000px; top: -1000px;"></iframe><iframe name="__gppLocator" src="about:blank" style="display: none; width: 0px; height: 0px; border: none; z-index: -1000; left: -1000px; top: -1000px;"></iframe><iframe name="googlefcInactive" src="about:blank" style="display: none; width: 0px; height: 0px; border: none; z-index: -1000; left: -1000px; top: -1000px;"></iframe><iframe name="googlefcLoaded" src="about:blank" style="display: none; width: 0px; height: 0px; border: none; z-index: -1000; left: -1000px; top: -1000px;"></iframe><iframe id="rufous-sandbox" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" style="position: absolute; visibility: hidden; display: none; width: 0px; height: 0px; padding: 0px; border: none;" title="Twitter analytics iframe"></iframe><iframe src="https://www.google.com/recaptcha/api2/aframe" width="0" height="0" style="display: none;"></iframe></body></html>
